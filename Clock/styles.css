@@ -1,0 +1,51 @@
+:root {
+    --clockFont: 'Press Start 2P', cursive;
+    --bgColor: #0a043c;
+    --txtColor: #a3ddcb;
+}
+
+/* Global */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    background-color: var(--bgColor);
+    font-size: 1.6rem;
+    font-family: var(--clockFont);
+    color: var(--txtColor);
+}
+
+.clock {
+    border: 1px solid var(--txtColor);
+    padding: 2.5rem;
+    font-size: 2rem;
+    position: absolute;
+    /* Center */
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); /*posiciona*/
+    letter-spacing: 7px;
+}
+@media (min-width: 360px) {
+    .clock{
+        padding: 2.8rem;
+        font-size: 3rem;
+    }   
+}
+@media (min-width: 768px) {
+    .clock{
+        font-size: 5rem;
+        padding: 5rem;
+    }   
+}
+@media (min-width: 900px) {
+    .clock{
+        font-size: 6rem;
+        padding: 10rem;
+    }   
+}
